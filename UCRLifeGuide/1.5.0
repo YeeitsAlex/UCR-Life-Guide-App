@@ -1,0 +1,8 @@
++ react-native-gesture-handler@1.6.1
+added 2 packages from 2 contributors, updated 1 package and audited 957 packages in 5.965s
+
+11 packages are looking for funding
+  run `npm fund` for details
+
+found 12 low severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
