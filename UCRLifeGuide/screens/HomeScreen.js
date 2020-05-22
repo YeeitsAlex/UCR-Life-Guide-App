@@ -1,8 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image} from 'react-native'
 import * as firebase from 'firebase'
 
 export default class HomeScreen extends React.Component{
+    //Some changes to navigationOptions won't be recognized until we reload the app
+    static navigationOptions ={
+        headerShown: false
+    };
+
     state = {
         email: "",
         displayName: ""
@@ -21,11 +26,15 @@ export default class HomeScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text>Hello {this.state.email}!</Text>
+                <StatusBar barStyle="light-content"></StatusBar>
+                <ImageBackground style= {styles.imageBackground} source={require("../assets/LifeAtUCR.png")}></ImageBackground>
 
-                <TouchableOpacity style={{marginTop: 32 }} onPress={this.signOutUser} onPress={() => this.props.navigation.navigate("Login")}>
-                    <Text>Logout</Text>
+                <Text style={styles.entryMessage}>Hello {this.state.displayName}!</Text>
+
+                <TouchableOpacity style={styles.button} onPress={this.signOutUser} onPress= {() => this.props.navigation.navigate("Login")}>
+                    <Text style={{color: "#FFF", fontWeight: "500"}}>Logout</Text>
                 </TouchableOpacity>
+                
             </View>
         )
     }
@@ -34,7 +43,77 @@ export default class HomeScreen extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        // justifyContent: "center",
+        // alignItems: "center"
+    },
+    greeting:{
+        marginTop: 150,
+        fontSize: 35,
+        fontWeight: "bold",
+        textAlign: "center",
+        color: "#f8f8ff",
+    },
+    errorMessage:{
+        height: 72,
+        alignItems: "center",
         justifyContent: "center",
-        alignItems: "center"
-    }
+        marginHorizontal: 30,
+    },
+    form:{
+        marginBottom: 48,
+        marginHorizontal: 30,
+    },
+    inputTitle:{
+        // marginTop: 50,
+        marginLeft: 15,
+        color: "#8A8F9E",
+        fontSize: 10,
+        textTransform: "uppercase"
+    },
+    input:{
+        borderBottomColor: "#8A8F9E",
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        height: 40,
+        fontSize: 15,
+        color: "#161F3D",
+        marginLeft: 15,
+        marginRight: 15,
+        marginBottom: 15,
+    },
+    inputPass:{
+        borderBottomColor: "#8A8F9E",
+        borderBottomWidth: StyleSheet.hairlineWidth,
+        height: 40,
+        fontSize: 15,
+        color: "#161F3D",
+        marginLeft: 15,
+        marginRight: 15,
+        marginTop: 32,
+    },
+    button:{
+        marginTop: 30,
+        marginHorizontal: 30,
+        backgroundColor: '#4169e1',
+        borderRadius: 4,
+        height: 52,
+        alignItems: "center",
+        justifyContent: "center"
+    },
+    imageBackground:{
+        flex: 0.5,
+        width: null,
+        height: null,
+        resizeMode: 'contain',
+        opacity: .9,
+        marginBottom: -35,
+        marginTop: -35
+    },
+    entryMessage: {
+        marginTop: 75,
+        // marginHorizontal: 150, commented out because textAlign accomplishes the same thing
+        textAlign: "center",
+        fontSize: 35,
+        
+    },
+
 })
