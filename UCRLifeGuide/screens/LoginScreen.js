@@ -1,8 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground} from 'react-native'
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground, Image, StatusBar, LayoutAnimation} from 'react-native'
 import * as firebase from 'firebase'
 
 export default class LoginScreen extends React.Component{
+    static navigationOptions ={
+        // header: null #commented out due to deprication
+        headerShown: false 
+    };
+
     state ={
         email: "",
         password: "",
@@ -18,13 +23,17 @@ export default class LoginScreen extends React.Component{
     render(){
         return(
             <View style={styles.container}>
-                <Text style={styles.greeting}>{'Hello!\n\n Welcome to UCR Life Guide'}</Text>
+                <StatusBar barStyle="light-content"></StatusBar>
+                <ImageBackground style= {styles.imageBackground} source={require("../assets/UCRTower.png")}>
+                    <Text style={styles.greeting}>{'Hello!\n Welcome to UCR Life Guide'}</Text>
+                </ImageBackground>
+                {/* <Text style={styles.greeting}>{'Hello!\n\n Welcome to UCR Life Guide'}</Text> */}
 
                 <View style={styles.errorMessage}>
                     {this.state.errorMessage && <Text style={styles.error}>{this.state.errorMessage}</Text>} 
                 </View>
 
-                <View sytle={styles.form}>
+                <View style={styles.form}>
                     <View>
                         <Text style={styles.inputTitle}>Email Address</Text>
                         <TextInput 
@@ -56,7 +65,7 @@ export default class LoginScreen extends React.Component{
 
                 <TouchableOpacity style={{ alignSelf: "center", marginTop: 32}} onPress= {() => this.props.navigation.navigate("Register")}>
                     <Text style={{color: "#414959", fontSize: 13}}>
-                        New to UCR Life Guide? <Text style={{ fontWeight: "500", color: "#E9446A"}}>Sign Up</Text>
+                        New to UCR Life Guide? <Text style={{ fontWeight: "500", color: "#ffd700"}}>Sign Up</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -71,19 +80,29 @@ const styles = StyleSheet.create({
         // alignItems: "center"
     },
     greeting:{
-        marginTop: 32,
-        fontSize: 18,
-        fontWeight: "400",
-        textAlign: "center"
+        marginTop: 150,
+        fontSize: 35,
+        fontWeight: "bold",
+        textAlign: "center",
+        color: "#f8f8ff",
+        //Styling to create shadow for text
+        textShadowColor: 'rgba(0, 0, 0, 0.75)',
+        textShadowOffset: {width: -1, height: 1},
+        textShadowRadius: 8
+        //End text shadow
     },
     errorMessage:{
         height: 72,
         alignItems: "center",
         justifyContent: "center",
         marginHorizontal: 30,
+        marginTop: 20,
+    },
+    error:{
+        color: "#ff0000"
     },
     form:{
-        marginBottom: 48,
+        marginBottom: 10,
         marginHorizontal: 30,
     },
     inputTitle:{
@@ -116,11 +135,19 @@ const styles = StyleSheet.create({
     button:{
         marginTop: 30,
         marginHorizontal: 30,
-        backgroundColor: '#E9446A',
+        backgroundColor: '#4169e1',
         borderRadius: 4,
         height: 52,
         alignItems: "center",
         justifyContent: "center"
-    }
+    },
+    imageBackground:{
+        flex: 0.8,
+        width: null,
+        height: null,
+        resizeMode: 'contain',
+        opacity: .9,
+        marginBottom: -35
+    },
 
 })
