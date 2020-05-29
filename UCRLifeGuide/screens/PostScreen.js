@@ -1,18 +1,29 @@
 import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image,  SafeAreaView, TextInput} from 'react-native'
 import {Ionicons} from "@expo/vector-icons"
-import * as firebase from 'firebase'
+import Constants from "expo-permissions"
+import * as Permissions from "expo-permissions"
+import Fire from "../Fire"
+// import * as firebase from 'firebase'
 
+const firebase = require('firebase');
+require("firebase/firestore");
 
 export default class PostScreen extends React.Component{
-    //Some changes to navigationOptions won't be recognized until we reload the app
-    // static navigationOptions ={
-    //     headerShown: false
-    // };
+    state = {
+        text: "",
+        // image: null
+    }
 
-    // signOutUSer = () => {
-    //     firebase.auth().signOut();
-    // };
+    handlePost = () => {
+        Fire.shared.addPost({text: this.state.text}).then(ref =>{
+            this.setState({text: ""});
+            this.props.navigation.goBack();
+        }).catch(error => {
+            console.log(error);
+            alert(error);
+        });
+    };
 
     render(){
         // LayoutAnimation.easeInEaseOut();
@@ -22,14 +33,24 @@ export default class PostScreen extends React.Component{
                     <TouchableOpacity onPress= {() => this.props.navigation.navigate("Q&A Forum")}>
                         <Ionicons name="md-arrow-back" size={24} color="#D8D9DB"></Ionicons>
                     </TouchableOpacity>
-                    <TouchableOpacity>
+                    
+                    <TouchableOpacity onPress ={this.handlePost}>
                         <Text style={{fontWeight:"500"}}>Post Question</Text>
                     </TouchableOpacity>
                 </View>
 
                 <View style = {styles.userInputContainer}>
                     <Image source={require("../assets/logobelltower.png")} style={styles.logo}></Image>
-                    <TextInput autoFocus={true} multiline={true} numberOfLines = {4} style={{flex: 1}} fontSize = {25} placeholder = "Ask a question..."></TextInput>
+                    <TextInput 
+                        autoFocus={true} 
+                        multiline={true} 
+                        numberOfLines = {4} 
+                        style={{flex: 1}} 
+                        fontSize = {25} 
+                        placeholder = "Ask a question..."
+                        onChangeText ={text => this.setState({text})}
+                        value ={this.state.text}
+                    ></TextInput>
                 </View>
             </SafeAreaView>
         );
@@ -39,6 +60,7 @@ export default class PostScreen extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        // backgroundColor: "blue"
         // justifyContent: "center",
         // alignItems: "center"
     },
