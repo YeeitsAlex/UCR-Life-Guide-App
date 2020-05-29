@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {Ionicons} from "@expo/vector-icons";
 import { AntDesign } from '@expo/vector-icons'; 
 
+//import screens
 import LoadingScreen from './screens/LoadingScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
@@ -15,6 +16,7 @@ import ParkingScreen from './screens/ParkingScreen';
 import QuestionAnswerScreen from './screens/QuestionAnswerScreen';
 import PostScreen from './screens/PostScreen';
 
+//import firebase
 import FirebaseKeys from "./config";
 import * as firebase from 'firebase';
 
@@ -112,7 +114,8 @@ const AppContainer = createStackNavigator(
           }
         },
         tabBarOptions: {
-          activeTintColor: "#161F3D",
+          //Commented out because the default blue color is what I need 
+          // activeTintColor: "blue",
           inactiveTintColor: "#B8BBC4"
         }
       }
