@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, StatusBar, ImageBackground} from 'react-native'
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, StatusBar, ImageBackground, KeyboardAvoidingView} from 'react-native'
 import * as firebase from 'firebase'
 
 export default class RegisterScreen extends React.Component{
@@ -11,21 +11,31 @@ export default class RegisterScreen extends React.Component{
         name: "",
         email: "",
         password: "",
+        passwordConfirm: "",
         errorMessage: null
     };
 
+    //handleSignUp, checks to make sure the passwords match before calling firebase to create a user
     handleSignUp = () => {
-        firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(userCredentials => {
-            return userCredentials.user.updateProfile({
-                displayName: this.state.name
+        const{password, passwordConfirm} = this.state;
+        if(password !== passwordConfirm){
+            alert("Passwords do not match");
+        }
+        else{
+            firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(userCredentials => {
+                return userCredentials.user.updateProfile({
+                    displayName: this.state.name
+                })
             })
-        })
-        .catch(error => this.setState({errorMessage: error.message}));
+            .catch(error => this.setState({errorMessage: error.message}));
+        }
     };
 
+
     render(){
+        // LayoutAnimation.easeInEaseOut();
         return(
-            <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior= "padding">
                 <StatusBar barStyle="light-content"></StatusBar>
                 <ImageBackground style= {styles.imageBackground} source={require("../assets/UCRTower.png")}>
                     <Text style={styles.greeting}>{'Register to get started'}</Text>
@@ -65,6 +75,16 @@ export default class RegisterScreen extends React.Component{
                             value={this.state.password}
                             ></TextInput>
                     </View>
+
+                    <View>
+                        <Text style={styles.inputTitle}>Confirm Password</Text>
+                        <TextInput
+                            style={styles.input} 
+                            secureTextEntry autoCapitalize="none"
+                            onChangeText={passwordConfirm => this.setState({ passwordConfirm })}
+                            value={this.state.passwordConfirm}
+                            ></TextInput>
+                    </View>
                 </View>
 
                 <TouchableOpacity style={styles.button} onPress={this.handleSignUp}>
@@ -75,7 +95,7 @@ export default class RegisterScreen extends React.Component{
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Cancel</Text>
                 </TouchableOpacity>
 
-            </View>
+            </KeyboardAvoidingView>
         )
     }
 }
