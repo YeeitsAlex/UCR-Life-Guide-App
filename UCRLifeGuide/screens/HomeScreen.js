@@ -24,12 +24,13 @@ export default class HomeScreen extends React.Component{
     };
 
     render(){
+        // LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"></StatusBar>
                 <ImageBackground style= {styles.imageBackground} source={require("../assets/LifeAtUCR.png")}></ImageBackground>
 
-                <Text style={styles.entryMessage}>Hello {this.state.displayName}!</Text>
+                <Text style={styles.entryMessage}>{'Welcome back, \n'}{this.state.displayName}!</Text>
 
                 <TouchableOpacity style={styles.button} onPress={this.signOutUser} onPress= {() => this.props.navigation.navigate("Login")}>
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Logout</Text>
