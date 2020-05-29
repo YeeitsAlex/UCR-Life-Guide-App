@@ -1,6 +1,7 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground, Image, StatusBar, LayoutAnimation} from 'react-native'
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, ImageBackground, Image, StatusBar, LayoutAnimation, KeyboardAvoidingView} from 'react-native'
 import * as firebase from 'firebase'
+
 
 export default class LoginScreen extends React.Component{
     static navigationOptions ={
@@ -21,8 +22,9 @@ export default class LoginScreen extends React.Component{
     }
 
     render(){
+        // LayoutAnimation.easeInEaseOut();
         return(
-            <View style={styles.container}>
+            <KeyboardAvoidingView style={styles.container} behavior= "padding">
                 <StatusBar barStyle="light-content"></StatusBar>
                 <ImageBackground style= {styles.imageBackground} source={require("../assets/UCRTower.png")}>
                     <Text style={styles.greeting}>{'Hello!\n Welcome to UCR Life Guide'}</Text>
@@ -68,7 +70,7 @@ export default class LoginScreen extends React.Component{
                         New to UCR Life Guide? <Text style={{ fontWeight: "500", color: "#ffd700"}}>Sign Up</Text>
                     </Text>
                 </TouchableOpacity>
-            </View>
+            </KeyboardAvoidingView>
         )
     }
 }
