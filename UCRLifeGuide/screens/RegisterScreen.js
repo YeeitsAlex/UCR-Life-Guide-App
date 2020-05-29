@@ -19,7 +19,7 @@ export default class RegisterScreen extends React.Component{
     handleSignUp = () => {
         const{password, passwordConfirm} = this.state;
         if(password !== passwordConfirm){
-            alert("Passwords do not match");
+            alert("Error passwords do not match");
         }
         else{
             firebase.auth().createUserWithEmailAndPassword(this.state.email, this.state.password).then(userCredentials => {
