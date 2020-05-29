@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image, Button, Alert} from 'react-native'
 import * as firebase from 'firebase'
 
 export default class HomeScreen extends React.Component{
@@ -23,6 +23,8 @@ export default class HomeScreen extends React.Component{
         firebase.auth().signOut();
     };
 
+
+
     render(){
         return(
             <View style={styles.container}>
@@ -34,7 +36,9 @@ export default class HomeScreen extends React.Component{
                 <TouchableOpacity style={styles.button} onPress={this.signOutUser} onPress= {() => this.props.navigation.navigate("Login")}>
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Logout</Text>
                 </TouchableOpacity>
-                
+                <TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Housing")}>
+                    <Text style={{color: "#FFF", fontWeight: "500"}}>FAQ</Text>
+                </TouchableOpacity>
             </View>
         )
     }
