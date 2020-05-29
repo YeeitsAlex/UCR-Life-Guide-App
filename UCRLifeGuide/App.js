@@ -6,6 +6,14 @@ import LoadingScreen from './screens/LoadingScreen';
 import LoginScreen from './screens/LoginScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import HomeScreen from './screens/HomeScreen';
+import HousingScreen from './screens/HousingScreen';
+import GlenMorScreen from './screens/GlenMorScreen';
+import BannockburnScreen from './screens/BannockburnScreen';
+import StonehavenScreen from './screens/StonehavenScreen';
+import GrandMarcScreen from './screens/GrandMarcScreen';
+import HighlanderHousingScreen from './screens/HighlanderHousingScreen';
+import CampusCrossingScreen from './screens/CampusCrossingScreen';
+// import FAQScreen from './screens/FAQScreen';
 import * as firebase from 'firebase';
 // export default function App() {
 //   return (
@@ -48,11 +56,24 @@ if (!firebase.apps.length) {
 
 const AppStack = createStackNavigator({
     Home: {screen: HomeScreen},  
+    // FAQ:{screen: FAQScreen}
+    Housing: {screen: HousingScreen},
+    GlenMor: {screen: GlenMorScreen},
+    Bannockburn: {screen: BannockburnScreen},
+    Stonehaven: {screen: StonehavenScreen},
+    GrandMarc: {screen: GrandMarcScreen},
+    HighlanderHousing: {screen: HighlanderHousingScreen},
+    CampusCrossing: {screen: CampusCrossingScreen},
 });
-
+/*
+const FAQStack = createStackNavigator({
+    // FAQ:{screen: FAQScreen},
+    Housing:{screen: HousingScreen}
+});
+*/
 const AuthStack = createStackNavigator({
     Login: {screen: LoginScreen},
-    Register:{screen: RegisterScreen} 
+    Register:{screen: RegisterScreen},
 });
   
 export default createAppContainer(
