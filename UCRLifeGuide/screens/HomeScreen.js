@@ -5,6 +5,8 @@ import Fire from '../Fire'
 
 require('firebase/firestore')
 
+const tempPosts = [];
+
 export default class HomeScreen extends React.Component{
     //Some changes to navigationOptions won't be recognized until we reload the app
     static navigationOptions ={
