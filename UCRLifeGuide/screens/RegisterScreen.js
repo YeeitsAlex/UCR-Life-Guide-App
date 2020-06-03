@@ -1,5 +1,5 @@
 import React from 'react'
-import {View, Text, StyleSheet, TextInput, TouchableOpacity, StatusBar, ImageBackground, KeyboardAvoidingView} from 'react-native'
+import {View, Text, StyleSheet, TextInput, TouchableOpacity, StatusBar, ImageBackground, KeyboardAvoidingView, LayoutAnimation} from 'react-native'
 import * as firebase from 'firebase'
 
 export default class RegisterScreen extends React.Component{
@@ -33,7 +33,7 @@ export default class RegisterScreen extends React.Component{
 
 
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <KeyboardAvoidingView style={styles.container} behavior= "padding">
                 <StatusBar barStyle="light-content"></StatusBar>
