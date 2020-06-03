@@ -15,6 +15,8 @@ import ParkingScreen from './screens/ParkingScreen';
 import QuestionAnswerScreen from './screens/QuestionAnswerScreen';
 import PostScreen from './screens/PostScreen';
 
+import GlenMorScreen from './screens/GlenMorScreen';
+
 import FirebaseKeys from "./config";
 import * as firebase from 'firebase';
 
@@ -176,6 +178,11 @@ const AuthStack = createStackNavigator({
     Login: {screen: LoginScreen},
     Register:{screen: RegisterScreen} 
 });
+
+const HousingStack = createStackNavigator({
+    // Housing: {screen: HousingScreen},
+    GlenMor: {screen: GlenMorScreen},
+});
   
 export default createAppContainer(
   createSwitchNavigator(
@@ -184,6 +191,7 @@ export default createAppContainer(
       App: {screen: AppContainer},
       Auth: {screen: AuthStack},
       // Post: {screen: PostScreen}, 
+      Housing: {screen: HousingStack},
     },
     {
       initialRouteName: "Loading"

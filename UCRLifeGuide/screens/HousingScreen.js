@@ -2,11 +2,12 @@ import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image} from 'react-native'
 import * as firebase from 'firebase'
 
+
 export default class HousingScreen extends React.Component{
     //Some changes to navigationOptions won't be recognized until we reload the app
-    // static navigationOptions ={
-    //     headerShown: false
-    // };
+    static navigationOptions ={
+         headerShown: false
+    };
 
     // signOutUSer = () => {
     //     firebase.auth().signOut();
@@ -16,7 +17,14 @@ export default class HousingScreen extends React.Component{
         // LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
-                <Text>Housing Screen</Text>                
+
+                
+                <Text style={styles.header}>On Campus Housing</Text>
+                
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GlenMor")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Glen Mor</Text>
+                </TouchableOpacity>               
+            
             </View>
         );
     }
@@ -97,5 +105,29 @@ const styles = StyleSheet.create({
         fontSize: 35,
         
     },
+    title: {
+        fontSize: 16,
+        color: '#a9aaab',
+    },
+    header: {
+        backgroundColor: '#bfbfbf',
+        fontSize: 20,
+        paddingLeft: 15,
+        color: '#7d7d7d',
+        paddingTop: 10,
+    },
+    mainheading: {
+        fontSize: 32,
+        textAlign: "center",
+        paddingTop: 30,
+    },
+    button1: {
+        height: 40,
+        paddingTop: 10,
+        paddingLeft: 20,
+        borderBottomColor: '#bfbfbf',
+        borderBottomWidth: 1,
+    },
+
 
 })
