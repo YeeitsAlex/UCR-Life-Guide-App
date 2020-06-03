@@ -13,12 +13,14 @@ class Fire{
         // const remoteUri = await this.uploadPhoto(localUri)
         
         return new Promise((res,rej) => {
-            this.firestore.collection("posts")
+            this.firestore
+                .collection("posts")
                 .add({
                     text,
                     uid: this.uid,
                     displayName: this.displayName,
-                    timestamp: this.timestamp,
+                    // timestamp: this.timestamp,
+                    timestamp: Date(this.timestamp)
                     // email: this.email,
                     // image: remoteUri
             })
@@ -30,6 +32,7 @@ class Fire{
             });
         });
     };
+
 
     // uploadPhoto = async uri => {
     //     const path = `photos/${this.uid}/${Date.now()}.jpg`;
@@ -85,8 +88,8 @@ class Fire{
     get timestamp(){
         return Date.now()
     }
+
 }
 
 Fire.shared = new Fire()
 export default Fire;
-

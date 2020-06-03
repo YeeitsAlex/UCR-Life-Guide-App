@@ -86,7 +86,7 @@ const AppContainer = createStackNavigator(
             screen: PostScreen,
             navigationOptions: {
               tabBarLabel: () => null, //Hides label for asking a question 
-              tabBarIcon: ({tintColor}) => <Ionicons name = "ios-add-circle" size={50} color= "gold" style={{shadowColor: "gold", shadowOffset: {width: 0, height: 0}, shadowRadius: 10, shadowOpacity: 0.3}}></Ionicons>
+              tabBarIcon: ({tintColor}) => <Ionicons name = "ios-add-circle" size={52} color= "gold" style={{shadowColor: "gold", shadowOffset: {width: 0, height: 0}, shadowRadius: 10, shadowOpacity: 0.3}}></Ionicons>
             }
           },
           Parking:{
