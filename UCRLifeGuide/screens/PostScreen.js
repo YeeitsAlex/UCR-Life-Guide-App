@@ -26,7 +26,7 @@ export default class PostScreen extends React.Component{
     };
 
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <SafeAreaView style = {styles.container}>
                 <View style = {styles.headers}>
@@ -47,7 +47,7 @@ export default class PostScreen extends React.Component{
                         numberOfLines = {4} 
                         style={{flex: 1}} 
                         fontSize = {25} 
-                        placeholder = "Ask a question..."
+                        placeholder = "Make a post or ask a question..."
                         onChangeText ={text => this.setState({text})}
                         value ={this.state.text}
                     ></TextInput>
