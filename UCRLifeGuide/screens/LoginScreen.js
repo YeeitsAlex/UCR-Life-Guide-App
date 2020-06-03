@@ -23,8 +23,12 @@ export default class LoginScreen extends React.Component{
         firebase.auth().signInWithEmailAndPassword(email, password).catch(error => this.setState({errorMessage: error.message}))
     }
 
+    handleGuest = () => {
+        firebase.auth().signInAnonymously();
+    }
+
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <KeyboardAvoidingView style={styles.container} behavior= "padding">
                 <StatusBar barStyle="light-content"></StatusBar>
@@ -63,7 +67,8 @@ export default class LoginScreen extends React.Component{
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Sign in</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={styles.button} onPress= {() => this.props.navigation.navigate("Home")}>
+                <TouchableOpacity style={styles.button} onPress={this.handleGuest}> 
+                {/* onPress= {() => this.props.navigation.navigate("Home")}> */}
                     <Text style={{color: "#FFF", fontWeight: "500"}}>Enter as a Guest User</Text>
                 </TouchableOpacity>
 
