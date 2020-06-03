@@ -33,7 +33,45 @@ class Fire{
         });
     };
 
+    // getPosts = async () =>{
+    //     let ref = this.collection.orderBy('timestamp');
+    //     try{
+    //         const querySnapshot = await ref.get();
+    //         const postsList = [];
+    //         querySnapshot.forEach(function(doc){
+    //             if(doc.exists){
+    //                 const postData = doc.data();
+    //                 // console.log(doc.data());
+    //                 const userName = postData.displayName;
+    //                 // console.log(userName);
+    //                 const userText = postData.text;
+    //                 // console.log(userText);
+    //                 const postTimeStamp = postData.timestamp;
+    //                 // console.log(postTimeStamp);
+    //                 // console.log(user);
+    //                 const tempPostArray = {
+    //                     id: doc.id,
+    //                     displayName: userName,
+    //                     text: userText,
+    //                     timestamp: postTimeStamp
+    //                 };
+    //                 console.log("Trying to push");
+    //                 postsList.push(tempPostArray);
+    //                 console.log(postsList);
+    //                 console.log("push successful");
+    //             }
+    //         });
+    //         // console.log(postsList[1]);
+    //         return{postsList};
+    //     } catch({message}){
+    //         alert(message);
+    //     }
+    // };
 
+
+    get collection(){
+        return firebase.firestore().collection('posts');
+    }
     // uploadPhoto = async uri => {
     //     const path = `photos/${this.uid}/${Date.now()}.jpg`;
     //     return new Promise(async (res, rej) => {
