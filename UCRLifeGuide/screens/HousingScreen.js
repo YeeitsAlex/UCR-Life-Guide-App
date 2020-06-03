@@ -16,7 +16,7 @@ export default class HousingScreen extends React.Component{
     render(){
         // LayoutAnimation.easeInEaseOut();
         return(
-            <View style={styles.container}>
+            <View >
 
                 
                 <Text style={styles.header}>On Campus Housing</Text>
@@ -24,7 +24,22 @@ export default class HousingScreen extends React.Component{
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GlenMor")}>
                     <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Glen Mor</Text>
                 </TouchableOpacity>               
-            
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Bannockburn")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Bannockburn</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Stonehaven</Text>
+                </TouchableOpacity>
+                <Text style={styles.header}>Off Campus Housing</Text>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GrandMarc")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Grand Marc</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("HighlanderHousing")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Highlander Housing</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                    <Text style={{color: "#a9aaab", fontWeight: "500", fontSize: 17}}>Campus Crossing</Text>
+                </TouchableOpacity>
             </View>
         );
     }

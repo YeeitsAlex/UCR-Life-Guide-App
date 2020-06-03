@@ -4,51 +4,13 @@ import * as firebase from 'firebase'
 import {Ionicons} from "@expo/vector-icons";
 import Constants from 'expo-constants';
 
-const DATA = [
-    {
-        title: "Glen Mor",
-        text: "Note: This community only houses second-year students and above. Glen Mor, Gaelic for 'Great Valley', commonly known for the origin of the famous Loch Ness Monster",
-        layout: "Single-occupancy rooms in two- and four-bedroom floor plans.",
-        occupancy: " Houses more than 1,300 residents",
 
-    },
-    {
-        title: "Amenities",
-        text: "",
-        layout: "{`\u2022 ${data}`} Utilities included, \n {`\u2022 ${data}`} basic cable,\n {`\u2022 ${data}`} high-speed Internet,\n {`\u2022 ${data}`} single-occupancy rooms,\n {`\u2022 ${data}`} central air & heater, \n {`\u2022 ${data}`} dining plan,\n {`\u2022 ${data}`} full furnishing,\n {`\u2022 ${data}`} refrigerator,\n {`\u2022 ${data}`} stove,\n {`\u2022 ${data}`} dishwasher",
-        occupancy: ""
-    },
-    {
-        title: "Community Features",
-        text: "",
-        layout: "{`\u2022 ${data}`} Convenience store and grill, \n {`\u2022 ${data}`} Study Rooms, \n {`\u2022 ${data}`} Computer Lab, \n {`\u2022 ${data}`} Intramural fields with night lighting, \n {`\u2022 ${data}`} Bike Storage, \n {`\u2022 ${data}`} Resident Association, \n {`\u2022 ${data}`} Programs and activities, \n {`\u2022 ${data}`} Laundry Rooms, \n {`\u2022 ${data}`} 24-hour assistance, \n {`\u2022 ${data}`} Parking available, \n {`\u2022 ${data}`} Resident Services Office, \n {`\u2022 ${data}`} Gaming Lounge, \n {`\u2022 ${data}`} Pool & BBQ, \n {`\u2022 ${data}`} Coffee, convenience store, home-style meals, and grill - The Market at Glen Mor, \n {`\u2022 ${data}`} Amazon Lockers",
-        occupancy: ""
-    },
-    {
-        title: "2 Bedroom / 1 Bath",
-        text: "",
-        layout: "112 sq. ft. / Bedroom",
-        occupancy: "Single-Occupancy Room: $1,210",
-    },
-    {
-        title: "4 Bedrom / 2 Bath",
-        text: "",
-        layout: "112 sq. ft. / Bedroom",
-        occupancy: "Single-Occupancy Room: $1,210",
-    }
-];
 
-function Item({ title }){
-    <View style={styles.item}>
-    <Text style={styles.title}>{title}</Text>
-    </View>
-};
-
-export default class GlenMorScreen extends React.Component{
+export default class CampusCrossingScreen extends React.Component{
     render(){
         return(
             <SafeAreaView>
-                <Text style={styles.header}>Glen Mor Screen</Text> 
+                <Text style={styles.header}>Campus Crossing Screen</Text> 
                 <TouchableOpacity style={styles.back} onPress={() => this.props.navigation.navigate("Home")}>
                     <Ionicons name="ios-arrow-round-back" size={32} color="#000"></Ionicons>
                 </TouchableOpacity>

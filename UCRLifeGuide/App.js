@@ -16,6 +16,11 @@ import QuestionAnswerScreen from './screens/QuestionAnswerScreen';
 import PostScreen from './screens/PostScreen';
 
 import GlenMorScreen from './screens/GlenMorScreen';
+import BannockburnScreen from './screens/BannockburnScreen';
+import CampusCrossingScreen from './screens/CampusCrossingScreen';
+import GrandMarcScreen from './screens/GrandMarcScreen';
+import StonehavenScreen from './screens/StonehavenScreen';
+import HighlanderHousingScreen from './screens/HighlanderHousingScreen';
 
 import FirebaseKeys from "./config";
 import * as firebase from 'firebase';
@@ -182,6 +187,11 @@ const AuthStack = createStackNavigator({
 const HousingStack = createStackNavigator({
     // Housing: {screen: HousingScreen},
     GlenMor: {screen: GlenMorScreen},
+    Bannockburn: {screen: BannockburnScreen},
+    CampusCrossing: {screen: CampusCrossingScreen},
+    GrandMarc: {screen: GrandMarcScreen},
+    Stonehaven: {screen: StonehavenScreen},
+    HighlanderHousing: {screen: HighlanderHousingScreen},
 });
   
 export default createAppContainer(
