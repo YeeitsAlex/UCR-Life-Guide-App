@@ -15,7 +15,12 @@ import HousingScreen from './screens/HousingScreen';
 import ParkingScreen from './screens/ParkingScreen';
 import QuestionAnswerScreen from './screens/QuestionAnswerScreen';
 import PostScreen from './screens/PostScreen';
-
+import GrandMarcScreen from './screens/HousingScreens/GrandMarcScreen';
+import GlenMorScreen from './screens/HousingScreens/GlenMorScreen';
+import BannockburnScreen from  './screens/HousingScreens/BannockburnScreen';
+import StonehavenScreen from  './screens/HousingScreens/StonehavenScreen';
+import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen';
+import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
 //import firebase
 import FirebaseKeys from "./config";
 import * as firebase from 'firebase';
@@ -65,6 +70,15 @@ if (!firebase.apps.length) {
 // const AppStack = createStackNavigator({
 //     Home: {screen: HomeScreen},  
 // });
+const HousingStack = createStackNavigator({
+  Housing: {screen: HousingScreen},
+  GlenMor: {screen: GlenMorScreen},
+  Bannockburn: {screen: BannockburnScreen},
+  CampusCrossing: {screen: CampusCrossingScreen},
+  GrandMarc: {screen: GrandMarcScreen},
+  Stonehaven: {screen: StonehavenScreen},
+  HighlanderHousing: {screen: HighlanderHousingScreen},
+});
 
 const AppContainer = createStackNavigator(
   {
@@ -77,7 +91,7 @@ const AppContainer = createStackNavigator(
             }
           },
           Housing:{
-            screen: HousingScreen,
+            screen: HousingStack,
             navigationOptions: {
               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-bed" size={24} color={tintColor}></Ionicons>
             }
@@ -131,6 +145,71 @@ const AppContainer = createStackNavigator(
   }
 )
 
+// const AppContainer = createStackNavigator(
+//   {
+//     default: createBottomTabNavigator(
+//       {
+//           Home: {
+//             screen: HomeScreen,
+//             navigationOptions: {
+//               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-home" size={24} color={tintColor}></Ionicons>
+//             }
+//           },
+//           Housing:{
+//             screen: HousingScreen,
+//             navigationOptions: {
+//               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-bed" size={24} color={tintColor}></Ionicons>
+//             }
+//           },
+//           "Ask a Question": {
+//             screen: PostScreen,
+//             navigationOptions: {
+//               tabBarLabel: () => null, //Hides label for asking a question 
+//               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-add-circle" size={52} color= "gold" style={{shadowColor: "gold", shadowOffset: {width: 0, height: 0}, shadowRadius: 10, shadowOpacity: 0.3}}></Ionicons>
+//             }
+//           },
+//           Parking:{
+//             screen: ParkingScreen,
+//             navigationOptions: {
+//               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-car" size={24} color={tintColor}></Ionicons>
+//             }
+//           },
+//           "Q&A Forum":{
+//             screen: QuestionAnswerScreen,
+//             navigationOptions: {
+//               tabBarIcon: ({tintColor}) => <AntDesign name="questioncircle" size={24} color={tintColor} />
+//             }
+//           }
+//       },
+//       {
+//         defaultNavigationOptions:{
+//           tabBarOnPress: ({navigation, defaultHandler}) => {
+//             if (navigation.state.key === "Post"){
+//               navigation.navigate("postModal")
+//             }
+//             else{
+//               defaultHandler()
+//             }
+//           }
+//         },
+//         tabBarOptions: {
+//           //Commented out because the default blue color is what I need 
+//           // activeTintColor: "blue",
+//           inactiveTintColor: "#B8BBC4"
+//         }
+//       }
+//     ),
+//     postModal: {
+//       screen: PostScreen
+//     }
+//   },
+//   {
+//     mode: "modal",
+//     headerMode: "none",
+//     // initialRouteName: "postModal"
+//   }
+// )
+
 //Tab Navigation Starts Here
 // const AppTabNavigator = createBottomTabNavigator(
 //   {
@@ -175,6 +254,8 @@ const AppContainer = createStackNavigator(
 
 //End Tab Nav
 
+
+
 const AuthStack = createStackNavigator({
     Login: {screen: LoginScreen},
     Register:{screen: RegisterScreen} 
@@ -186,6 +267,7 @@ export default createAppContainer(
       Loading: {screen: LoadingScreen},
       App: {screen: AppContainer},
       Auth: {screen: AuthStack},
+      // Housing: {screen: HousingStack},
       // Post: {screen: PostScreen}, 
     },
     {
