@@ -1,12 +1,13 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image, SafeAreaView} from 'react-native'
 import * as firebase from 'firebase'
+
 
 export default class HousingScreen extends React.Component{
     //Some changes to navigationOptions won't be recognized until we reload the app
-    // static navigationOptions ={
-    //     headerShown: false
-    // };
+    static navigationOptions ={
+         headerShown: false
+    };
 
     // signOutUSer = () => {
     //     firebase.auth().signOut();
@@ -15,9 +16,33 @@ export default class HousingScreen extends React.Component{
     render(){
         // LayoutAnimation.easeInEaseOut();
         return(
-            <View style={styles.container}>
-                <Text>Housing Screen</Text>                
-            </View>
+            <SafeAreaView >
+                <View style={styles.headers}>
+                    <Text style={styles.title}>Housing Options</Text>                
+                </View>
+                
+                <Text style={styles.header}>On Campus Housing</Text>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GlenMor")}>
+                    <Text style={styles.housingNames}>Glen Mor</Text>
+                </TouchableOpacity>               
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Bannockburn")}>
+                    <Text style={styles.housingNames}>Bannockburn</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
+                    <Text style={styles.housingNames}>Stonehaven</Text>
+                </TouchableOpacity>
+
+                <Text style={styles.header}>Off Campus Housing</Text>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GrandMarc")}>
+                    <Text style={styles.housingNames}>Grand Marc</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("HighlanderHousing")}>
+                    <Text style={styles.housingNames}>Highlander Housing</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                    <Text style={styles.housingNames}>Campus Crossing</Text>
+                </TouchableOpacity>
+            </SafeAreaView>
         );
     }
 }
@@ -27,6 +52,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center"
+    },
+    housingNames: {
+        color: "black", 
+        fontWeight: "500",
+         fontSize: 19
     },
     greeting:{
         marginTop: 150,
@@ -97,5 +127,47 @@ const styles = StyleSheet.create({
         fontSize: 35,
         
     },
+    // title: {
+    //     fontSize: 16,
+    //     color: '#a9aaab',
+    // },
+    header: {
+        backgroundColor: '#4169e1',
+        fontSize: 20,
+        paddingLeft: 15,
+        color: '#FFF',
+        paddingTop: 10,
+        paddingBottom: 10
+    },
+    mainheading: {
+        fontSize: 32,
+        textAlign: "center",
+        paddingTop: 30,
+    },
+    button1: {
+        height: 45,
+        paddingTop: 10,
+        paddingLeft: 20,
+        borderBottomColor: '#bfbfbf',
+        borderBottomWidth: 1,
+    },
+    headers: {
+        // flexDirection: "row",
+        // justifyContent: "space-between",
+        paddingHorizontal: 32,
+        paddingVertical: 12, 
+        borderBottomWidth: 0.5,
+        borderBottomColor: "#D8D9DB",
+        alignSelf: "center",
+        left: 55
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: "500",
+        paddingRight: 120,
+        paddingTop: 5,
+        fontWeight: "bold",
+    },
+
 
 })
