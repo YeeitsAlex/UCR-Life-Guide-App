@@ -51,7 +51,7 @@ export default class HomeScreen extends React.Component{
                 {/* <Text style={styles.entryMessage}>{'Welcome back, \n'}{this.state.displayName}!</Text> */}
 
                 <TouchableOpacity style={styles.button} onPress={() => this.signOutUser()}>
-                    <Text style={{color: "#FFF", fontWeight: "500", paddingBottom: 15, fontSize: 15}}>Logout</Text>
+                    <Text style={{color: "#FFF", fontWeight: "500", paddingBottom: 12, fontSize: 27}}>Logout</Text>
                 </TouchableOpacity>
 
                 
