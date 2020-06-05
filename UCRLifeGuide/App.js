@@ -4,7 +4,7 @@ import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import {createStackNavigator} from 'react-navigation-stack';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {Ionicons} from "@expo/vector-icons";
-import { AntDesign } from '@expo/vector-icons'; 
+import {AntDesign} from '@expo/vector-icons'; 
 
 //import screens
 import LoadingScreen from './screens/LoadingScreen';
@@ -21,7 +21,14 @@ import BannockburnScreen from  './screens/HousingScreens/BannockburnScreen';
 import StonehavenScreen from  './screens/HousingScreens/StonehavenScreen';
 import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen';
 import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
-//import firebase
+import Lot30Screen from './screens/ParkingScreens/Lot30Screen';
+import Lot50Screen from './screens/ParkingScreens/Lot50Screen';
+import Lot51Screen from './screens/ParkingScreens/Lot51Screen';
+import Lot26Screen from './screens/ParkingScreens/Lot26Screen';
+import Lot32Screen from './screens/ParkingScreens/Lot32Screen';
+//End Screen Imports
+
+//Import Firebase config
 import FirebaseKeys from "./config";
 import * as firebase from 'firebase';
 
@@ -46,15 +53,6 @@ import * as firebase from 'firebase';
 
 var firebaseConfig = FirebaseKeys;
 
-// var firebaseConfig = {
-//     apiKey: "AIzaSyAjiPNybkiq3YnK9LyySsg9Bbsf0rHDPPE",
-//     authDomain: "ucrlifeguide.firebaseapp.com",
-//     databaseURL: "https://ucrlifeguide.firebaseio.com",
-//     projectId: "ucrlifeguide",
-//     storageBucket: "ucrlifeguide.appspot.com",
-//     messagingSenderId: "930611404938",
-//     appId: "1:930611404938:web:3caa9fb2fb57b2c389cd73"
-//   };
 
 //Check to see if database initialized already, if not initialize Firebase
 //Usually not needed, assume this is needed because I ran firebase init from the command line 
@@ -62,14 +60,7 @@ if (!firebase.apps.length) {
     firebase.initializeApp(FirebaseKeys);
 }
 
-// console.log(firebase.name);
-// console.log(firebase.database());
 
-
-//Comment out because now using tab navigation
-// const AppStack = createStackNavigator({
-//     Home: {screen: HomeScreen},  
-// });
 const HousingStack = createStackNavigator({
   Housing: {screen: HousingScreen},
   GlenMor: {screen: GlenMorScreen},
@@ -79,6 +70,16 @@ const HousingStack = createStackNavigator({
   Stonehaven: {screen: StonehavenScreen},
   HighlanderHousing: {screen: HighlanderHousingScreen},
 });
+
+const ParkingStack = createStackNavigator({
+  Parking: {screen: ParkingScreen},
+  Lot26: {screen: Lot26Screen},
+  Lot30: {screen: Lot30Screen},
+  Lot32: {screen: Lot32Screen},
+  Lot50: {screen: Lot50Screen},
+  Lot51: {screen: Lot51Screen},
+  // Lot30: {screen: Lot30Screen},
+})
 
 const AppContainer = createStackNavigator(
   {
@@ -104,7 +105,7 @@ const AppContainer = createStackNavigator(
             }
           },
           Parking:{
-            screen: ParkingScreen,
+            screen: ParkingStack,
             navigationOptions: {
               tabBarIcon: ({tintColor}) => <Ionicons name = "ios-car" size={24} color={tintColor}></Ionicons>
             }
@@ -209,52 +210,6 @@ const AppContainer = createStackNavigator(
 //     // initialRouteName: "postModal"
 //   }
 // )
-
-//Tab Navigation Starts Here
-// const AppTabNavigator = createBottomTabNavigator(
-//   {
-//       Home: {
-//         screen: HomeScreen,
-//         navigationOptions: {
-//           tabBarIcon: ({tintColor}) => <Ionicons name = "ios-home" size={24} color={tintColor}></Ionicons>
-//         }
-//       },
-//       Housing:{
-//         screen: HousingScreen,
-//         navigationOptions: {
-//           tabBarIcon: ({tintColor}) => <Ionicons name = "ios-bed" size={24} color={tintColor}></Ionicons>
-//         }
-//       },
-//       "Ask a Question": {
-//         screen: PostScreen,
-//         navigationOptions: {
-//           tabBarLabel: () => null, //Hides label for asking a question 
-//           tabBarIcon: ({tintColor}) => <Ionicons name = "ios-add-circle" size={50} color= "gold" style={{shadowColor: "gold", shadowOffset: {width: 0, height: 0}, shadowRadius: 10, shadowOpacity: 0.3}}></Ionicons>
-//         }
-//       },
-//       Parking:{
-//         screen: ParkingScreen,
-//         navigationOptions: {
-//           tabBarIcon: ({tintColor}) => <Ionicons name = "ios-car" size={24} color={tintColor}></Ionicons>
-//         }
-//       },
-//       "Q&A Forum":{
-//         screen: QuestionAnswerScreen,
-//         navigationOptions: {
-//           tabBarIcon: ({tintColor}) => <AntDesign name="questioncircle" size={24} color={tintColor} />
-//         }
-//       },
-//   },
-//   {
-//     tabBarOptions: {
-
-//     }
-//   }
-// );
-
-//End Tab Nav
-
-
 
 const AuthStack = createStackNavigator({
     Login: {screen: LoginScreen},
