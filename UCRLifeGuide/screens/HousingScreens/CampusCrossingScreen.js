@@ -13,7 +13,7 @@ export default class CampusCrossingScreen extends React.Component{
     // };
 
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
                 <Text>CampusCrossing Screen</Text>                

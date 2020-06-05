@@ -13,7 +13,7 @@ export default class GlenMorScreen extends React.Component{
     // };
 
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
                 <Text>GlenMor Screen</Text>                

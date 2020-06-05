@@ -13,7 +13,7 @@ export default class StonehavenScreen extends React.Component{
     // };
 
     render(){
-        // LayoutAnimation.easeInEaseOut();
+        LayoutAnimation.easeInEaseOut();
         return(
             <View style={styles.container}>
                 <Text>Stonehaven Screen</Text>                
