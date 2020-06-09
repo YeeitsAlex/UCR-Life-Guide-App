@@ -19,6 +19,7 @@ import GrandMarcScreen from './screens/HousingScreens/GrandMarcScreen';
 import GlenMorScreen from './screens/HousingScreens/GlenMorScreen';
 import BannockburnScreen from  './screens/HousingScreens/BannockburnScreen';
 import StonehavenScreen from  './screens/HousingScreens/StonehavenScreen';
+import FalkirkScreen from './screens/HousingScreens/FalkirkScreen';
 import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen';
 import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
 import Lot30Screen from './screens/ParkingScreens/Lot30Screen';
@@ -69,6 +70,7 @@ const HousingStack = createStackNavigator({
   GrandMarc: {screen: GrandMarcScreen},
   Stonehaven: {screen: StonehavenScreen},
   HighlanderHousing: {screen: HighlanderHousingScreen},
+  Falkirk: {screen: FalkirkScreen},
 });
 
 const ParkingStack = createStackNavigator({
