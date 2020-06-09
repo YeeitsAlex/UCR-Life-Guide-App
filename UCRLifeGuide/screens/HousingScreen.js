@@ -21,47 +21,47 @@ export default class HousingScreen extends React.Component{
         const scrollEnabled = this.state.screenHeight > height;
         // LayoutAnimation.easeInEaseOut();
         return(
-            <SafeAreaView>
+            <SafeAreaView style={{height: 800}}>
                 <ScrollView onContentSizeChange={this.onContentSizeChange}>
-                <View style={styles.headers}>
-                    <Text style={styles.title}>Housing Options</Text>                
-                </View>
-                
-                {/* On Campus Housing */}
-                <Text style={styles.header}>On Campus Housing</Text>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GlenMor")}>
-                    <Text style={styles.housingNames}>Glen Mor</Text>
-                </TouchableOpacity>               
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Bannockburn")}>
-                    <Text style={styles.housingNames}>Bannockburn Village</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
-                    <Text style={styles.housingNames}>Stonehaven</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
-                    <Text style={styles.housingNames}>Falkirk</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
-                    <Text style={styles.housingNames}>The Plaza</Text>
-                </TouchableOpacity>
+                    <View style={styles.headers}>
+                        <Text style={styles.title}>Housing Options</Text>                
+                    </View>
+                    
+                    {/* On Campus Housing */}
+                    <Text style={styles.header}>On Campus Housing</Text>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GlenMor")}>
+                        <Text style={styles.housingNames}>Glen Mor</Text>
+                    </TouchableOpacity>               
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Bannockburn")}>
+                        <Text style={styles.housingNames}>Bannockburn Village</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
+                        <Text style={styles.housingNames}>Stonehaven</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
+                        <Text style={styles.housingNames}>Falkirk</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Stonehaven")}>
+                        <Text style={styles.housingNames}>The Plaza</Text>
+                    </TouchableOpacity>
 
-                {/* Off Campus Housing */}
-                <Text style={styles.header}>Off Campus Housing</Text>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GrandMarc")}>
-                    <Text style={styles.housingNames}>Grand Marc</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("HighlanderHousing")}>
-                    <Text style={styles.housingNames}>Highlander Housing</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
-                    <Text style={styles.housingNames}>Campus Crossing</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
-                    <Text style={styles.housingNames}>Berkdale</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
-                    <Text style={styles.housingNames}>University Towers</Text>
-                </TouchableOpacity>
+                    {/* Off Campus Housing */}
+                    <Text style={styles.header}>Off Campus Housing</Text>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GrandMarc")}>
+                        <Text style={styles.housingNames}>Grand Marc</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("HighlanderHousing")}>
+                        <Text style={styles.housingNames}>Highlander Housing</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                        <Text style={styles.housingNames}>Campus Crossing</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                        <Text style={styles.housingNames}>Berkdale</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                        <Text style={styles.housingNames}>University Towers</Text>
+                    </TouchableOpacity>
                 </ScrollView>
             </SafeAreaView>
         );
@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
     housingNames: {
         color: "black", 
