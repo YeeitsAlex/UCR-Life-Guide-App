@@ -23,9 +23,12 @@ import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen'
 import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
 import Lot30Screen from './screens/ParkingScreens/Lot30Screen';
 import Lot50Screen from './screens/ParkingScreens/Lot50Screen';
-import Lot51Screen from './screens/ParkingScreens/Lot51Screen';
+import Lot24Screen from './screens/ParkingScreens/Lot24Screen';
 import Lot26Screen from './screens/ParkingScreens/Lot26Screen';
-import Lot32Screen from './screens/ParkingScreens/Lot32Screen';
+import Lot31Screen from './screens/ParkingScreens/Lot31Screen';
+import Lot1Screen from './screens/ParkingScreens/Lot1Screen';
+import Lot6Screen from './screens/ParkingScreens/Lot6Screen';
+import HunterParkScreen from './screens/ParkingScreens/HunterParkScreen';
 //End Screen Imports
 
 //Import Firebase config
@@ -75,9 +78,12 @@ const ParkingStack = createStackNavigator({
   Parking: {screen: ParkingScreen},
   Lot26: {screen: Lot26Screen},
   Lot30: {screen: Lot30Screen},
-  Lot32: {screen: Lot32Screen},
+  Lot31: {screen: Lot31Screen},
   Lot50: {screen: Lot50Screen},
-  Lot51: {screen: Lot51Screen},
+  Lot24: {screen: Lot24Screen},
+  Lot1: {screen: Lot1Screen},
+  Lot6: {screen: Lot6Screen},
+  HunterPark: {screen: HunterParkScreen}
   // Lot30: {screen: Lot30Screen},
 })
 
