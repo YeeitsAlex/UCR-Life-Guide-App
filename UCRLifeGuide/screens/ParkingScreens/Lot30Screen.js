@@ -1,20 +1,60 @@
 import React from 'react'
-import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image} from 'react-native'
+import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image, SafeAreaView, ScrollView, Dimensions} from 'react-native'
 import * as firebase from 'firebase'
+import DropdownMenu from 'react-native-dropdown-menu'
+import DropDownItem from 'react-native-drop-down-item'
+
+const {height} = Dimensions.get('window')  
+
+// content = [
+//     {image: '../../assets/Lot26'}
+// ]
 
 export default class Lot30Screen extends React.Component{
+    state={
+        screenHeight: 0,
+    }
     //Some changes to navigationOptions won't be recognized until we reload the app
     // static navigationOptions ={
     //     headerShown: false
     // };
 
+    onContentSizeChange = (contentWidth, contentHeight) =>{
+        this.setState({screenHeight: contentHeight});
+    }
 
     render(){
         LayoutAnimation.easeInEaseOut();
+        const scrollEnabled = this.state.screenHeight > height;
         return(
-            <View style={styles.container}>
-                <Text>Lot 30 Information</Text>                
-            </View>
+            <SafeAreaView>
+                <ScrollView onContentSizeChange={this.onContentSizeChange}>
+                    <View style={styles.container}>
+                        <Text style={styles.cardInfoHeader}>Lot Information</Text>
+                        <Text style={styles.cardInfo}>
+                            <Text style={{fontSize: 23,fontWeight: "bold"}}>
+                                Permits Allowed: 
+                                <Text style={{color:"gold", fontWeight: "bold"}}> Gold</Text>,
+                                <Text style={{color: "blue",fontWeight: "bold"}}>Blue</Text>, 
+                                <Text style={{color: "red", fontWeight: "bold"}}>Red</Text>
+                            </Text>
+                            {"\n"}
+                            Availability to Gold Permits: <Text style={styles.importantText}> 7AM-12AM</Text>
+                            {"\n"}
+                            Average Time to Campus:<Text style={styles.importantText}> 12 Minutes</Text>    
+                            {"\n"}
+                            Total Number of Spots:<Text style={styles.importantText}> 2187</Text>
+                            {"\n"}
+                            Best Time to Park: <Text style={styles.importantText}> Before 8:30AM, After: 3PM</Text>
+                            {"\n"}
+                            
+                        </Text>               
+                    </View>
+                    <View style={{height: 600}}>
+                        <Image source = {require("../../assets/parkingPictures/Lot30.png")} style={{width: 420, height: 550}}></Image>
+                    </View> 
+                </ScrollView>
+            </SafeAreaView>
         );
     }
 }
@@ -22,8 +62,27 @@ export default class Lot30Screen extends React.Component{
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        borderWidth: 3
+        // justifyContent: "center",
+        // alignItems: "center"
+    },
+    cardInfoHeader: {
+        fontSize: 25,
         justifyContent: "center",
-        alignItems: "center"
+        alignSelf: "center",
+        fontWeight: "bold",
+        textDecorationLine: "underline",
+        paddingBottom: 5
+    },
+    importantText:{
+        fontWeight: "bold"
+    },
+    cardInfo:{
+        fontSize: 18
+    },
+    permit:{
+        fontSize: 20,
+        color: "red"
     },
     greeting:{
         marginTop: 150,

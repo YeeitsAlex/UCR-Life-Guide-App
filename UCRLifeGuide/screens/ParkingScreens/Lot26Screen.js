@@ -43,14 +43,14 @@ export default class Lot26Screen extends React.Component{
                             {"\n"}
                             Average Time to Campus:<Text style={styles.importantText}>15-18 Minutes</Text>    
                             {"\n"}
-                            Total Number of Spots:<Text style={styles.importantText}>Fill in spots</Text>
+                            Total Number of Spots:<Text style={styles.importantText}> 435</Text>
                             {"\n"}
-                            Best Time to Park: <Text style={styles.importantText}>Before 9AM, After: 3PM</Text>
+                            Best Time to Park: <Text style={styles.importantText}>Before 10AM, After: 2PM</Text>
                             {"\n"}
 
                         </Text>               
                     </View>
-                    <View style={{height: 600}}>
+                    <View style={{height: 700}}>
                         <Image source = {require("../../assets/parkingPictures/Lot26.png")}></Image>
                     </View> 
                 </ScrollView>
@@ -71,7 +71,8 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignSelf: "center",
         fontWeight: "bold",
-        textDecorationLine: "underline"
+        textDecorationLine: "underline",
+        paddingBottom: 5
     },
     importantText:{
         fontWeight: "bold"
