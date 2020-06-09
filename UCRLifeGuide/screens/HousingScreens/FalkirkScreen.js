@@ -19,7 +19,7 @@ export default class FalkirkScreen extends React.Component{
                     <View style={styles.cardInfo}>
                         <Text style>
                         {"\n"}
-                        <Text style={styles.importantText}>Description: </Text> Single-occupancy rooms in 5 different floor plans. 
+                        <Text style={styles.importantText}>Description: </Text> Single-occupancy and double-occupancy room in 5 different floor plans. 
                         {"\n"}
                         Only allowed for: continuing students, transfer students, and graduate students
                         {"\n"}
