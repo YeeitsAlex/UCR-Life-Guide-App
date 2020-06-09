@@ -10,20 +10,38 @@ require("firebase/firestore");
 
 //temp posts
 // let posts = []
-// const posts = [
-//     {
-//         id: "1",
-//         name: "John Doe",
-//         text: "Hello there",
-//         timestamp: "Tue Jun 02 2020 14:27:32 GMT-0700 (PDT)",
-//     },
-//     {
-//         id: "2",
-//         name: "Jane Doe",
-//         text: "It's hot",
-//         timestamp: "1590794172334"
-//     },
-// ];
+const frequent = [
+    {
+        id: "1",
+        displayName: "Admin",
+        text: "Question: \nWhere should I park if I want to work out at the Student Rec Center(SRC)?\n\nAnswer: \nFor students with parking permits, the SRC offers free 1 hour and 30 minute parking.",
+        timestamp: "Tue Jun 02 2020 2:27:32PM",
+    },
+    {
+        id: "2",
+        displayName: "Admin",
+        text: "Question: \nWhat is the best on-campus housing for social life? \n\nAnswer: \nFor incoming 1st year students Aberdeen-Inverness, for 2nd Years and above: Glen Mor without a doubt.",
+        timestamp: "Over a year ago"
+    },
+    {
+        id: "3",
+        displayName: "Admin",
+        text: "Question: \nAre there meal plans available for students who don't live on-campus? \n\nAnswer: \nYes there are meal plans available for roughly $1200 a month, you can use this meal plan to purchase food from on-campus restaurants.",
+        timestamp: "Over a year ago",
+    },
+    {
+        id: "4",
+        displayName: "Admin",
+        text: "Question: \nWhere can I get coffee or tea at school? \n\nAnswer: \nThe closest place to get coffee or tea if you're on-campus is Coffee Bean. There's also a Starbucks on-campus but it more out of the way. The Starbucks is located at the Glen Mor Market, and you can also purchase Coffee and snacks at the multiple Scotty's stores across campus.",
+        timestamp: "Tue July 02 2019 12:39:32PM",
+    },
+    {
+        id: "5",
+        displayName: "Admin",
+        text: "Question: \nIs there anywhere else besides The Hub where I can get food on-campus?? \n\nAnswer: \nYou can get food at the Glen Mor market, there are two food places inside of there. You can also go to the freshman dining halls, specifically their buffets if you really want to eat. Other than that, on Wednesdays there are multiple clubs that set up stalls where they sell food and is always a good option if you want something different.",
+        timestamp: "Tue Sept 02 2019 3:39:32PM",
+    },
+];
 
 export default class QuestionAnswerScreen extends React.Component{
     state = {
@@ -70,7 +88,7 @@ export default class QuestionAnswerScreen extends React.Component{
                 }
             });
             // console.log(postsList)
-            postsList.sort((a,b) => a.timestamp < b.timestamp);
+            postsList.sort((a,b) => a.timestamp > b.timestamp);
             this.setState({posts: postsList})
             //return postsList;
         } catch({message}){
@@ -113,7 +131,7 @@ export default class QuestionAnswerScreen extends React.Component{
                 <Text style={styles.listHeader}>Frequently Asked Questions</Text>
                 <FlatList 
                     style={styles.postsList}
-                    data={this.state.posts} 
+                    data={frequent} 
                     renderItem={({item})=> this.renderPost(item)}
                     keyExtractor={item => item.id}
                     showsVerticalScrollIndicator={false}    
@@ -181,7 +199,8 @@ const styles = StyleSheet.create({
     names: {
         fontSize: 15,
         fontWeight: "500", 
-        color: '#454D65'
+        color: '#454D65',
+        paddingTop: 15
     }, 
     listHeader:{
         backgroundColor: '#4169e1',
