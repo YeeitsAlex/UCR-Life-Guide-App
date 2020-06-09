@@ -16,9 +16,6 @@ export default class GlenMorScreen extends React.Component{
         return(
             <SafeAreaView style={styles.container}>
                 <Text style={styles.header}> Information</Text>
-                {/* <ScrollView onContentSizeChange={this.onContentSizeChange}>
-                <View> */}
-                    
                     <View style={styles.cardInfo}>
                         <Text style>
                         {"\n"}
@@ -32,17 +29,8 @@ export default class GlenMorScreen extends React.Component{
                         {"\n"}
                         <Text style={{fontStyle: "italic", fontSize: 10}}>*Floor plans and rates may vary</Text>
                         {"\n"}
-                        </Text>
-                        {/* <View style={styles.image}>
-                                <Image source = {require("../../assets/housingPictures/glenmor-2bed.jpg")}></Image>
-                        </View>
-                        <View style={styles.image}>
-                                <Image source = {require("../../assets/housingPictures/glenmor-4bed.jpg")}></Image>
-                        </View>                     */}
-                        
+                        </Text>   
                     </View>
-                {/* </View> */}
-                {/* </ScrollView> */}
                 <Text style={styles.header}> Reviews </Text>
                 <ScrollView onContentSizeChange={this.onContentSizeChange}>
                     <View>
@@ -68,7 +56,6 @@ export default class GlenMorScreen extends React.Component{
                             My two cents: Glen more is a premium introduction to living on your own. It has what you need, so you don't have to think about most stuff. However, it does come at a price.
                             {"\n\n"}
                             Once you're used to UCR and the Riverside lifestyle, you'll probably find yourself moving out, either saving money, getting a larger space, or living by yourself.
-                            {/* {"\n\n"}   */}
                         </Text>
                         <Text style={styles.card}>
                             The biggest con to Glen-Mor is the cost. Not only the cost, but the amount of space you get for that cost.
@@ -141,7 +128,6 @@ const styles = StyleSheet.create({
     header: {
         backgroundColor: '#4169e1',
         fontSize: 20,
-        // paddingLeft: 15,
         color: '#FFF',
         paddingTop: 5,
         paddingBottom: 5,
@@ -150,12 +136,6 @@ const styles = StyleSheet.create({
     },
     card: {
         padding: 15,
-        // borderBottomColor: "#000",
-        // paddingBottom: 10,
-        // backgroundColor: "#dbdbdb",
-        // paddingLeft: 20,
-        // paddingRight: 20, 
-        // paddingTop: 20,
         justifyContent: "center",
         backgroundColor: "#f0f0f0",
         margin: 10,
