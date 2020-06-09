@@ -39,38 +39,74 @@ export default class ParkingScreen extends React.Component{
                 
                 {/* On Campus ParkingOptions */}
                 <Text style={styles.header}>On Campus Parking</Text>
+                
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot1")}>
+                    <Text style={styles.lotNames}>Lot 1</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "red", fontWeight: "bold"}}> Red, <Text style={{color: "blue"}}>Blue</Text><Text style={{color: "black"}}>, Visitors</Text></Text>
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot6")}>
+                    <Text style={styles.lotNames}>Lot 6</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "red", fontWeight: "bold"}}> Red, <Text style={{color: "blue"}}>Blue</Text><Text style={{color: "black"}}>, Visitors</Text></Text>
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot24")}>
+                    <Text style={styles.lotNames}>Lot 24</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "red", fontWeight: "bold"}}> Red, <Text style={{color: "blue"}}>Blue</Text></Text>
+                    </Text>
+                </TouchableOpacity>
+
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot26")}>
                     <Text style={styles.lotNames}>Lot 26</Text>
-                    <Text style={styles.lotTypes}>Type: Gold Permit</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "gold", fontWeight: "bold"}}> Gold Permit</Text>
+                    </Text>
                 </TouchableOpacity>
+
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot30")}>
                     <Text style={styles.lotNames}>Lot 30</Text>
-                    <Text style={styles.lotTypes}>Type: Gold Permit</Text>
-                </TouchableOpacity>                   
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot32")}>
-                    <Text style={styles.lotNames}>Lot 32</Text>
-                    <Text style={styles.lotTypes}>Type: Gold Permit</Text>
-                </TouchableOpacity>    
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "gold", fontWeight: "bold"}}> Gold Permit</Text>
+                    </Text>
+                </TouchableOpacity>
+
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot31")}>
+                    <Text style={styles.lotNames}>Lot 31</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "gold", fontWeight: "bold"}}> Gold Permit</Text>
+                    </Text>
+                </TouchableOpacity>
+
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot50")}>
                     <Text style={styles.lotNames}>Lot 50</Text>
-                    <Text style={styles.lotTypes}>Type: Gold Permit</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Lot51")}>
-                    <Text style={styles.lotNames}>Lot 51</Text>
-                    <Text style={styles.lotTypes}>Type: Gold Permit</Text>
+                    <Text style={styles.lotTypes}>Best For: 
+                        <Text style={{color: "gold", fontWeight: "bold"}}> Gold Permit</Text>
+                    </Text>
                 </TouchableOpacity>
 
                 {/* Off Campus ParkingOptions */}
-                {/* <Text style={styles.header}>Off Campus Parking</Text>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("GrandMarc")}>
-                    <Text style={styles.housingNames}>Grand Marc</Text>
+                <Text style={styles.header}>Off Campus Parking</Text>
+                <Text style={styles.infoCard}>
+                    <Text style={styles.cardInfo}>
+                        <Text style={{textAlign: "center", textDecorationLine: "underline", color: "red"}}>Important Notice</Text>
+                        {"\n"}
+                        <Text style={{fontSize: 25, textAlign: "center"}}>*NOT RECOMMENDED*</Text>
+                        {"\n"}
+                        <Text>Information for off-campus parking has been removed due to many current students reporting regular break-ins to their vehicles when
+                            parking in neighborhoods close to school. Please do your best to not park off-campus, it is not worth it. If you must drive, try to park at the Hunter 
+                            Park station parking lot and take the bus to school. 
+                        </Text>
+                    </Text>
+                </Text>
+                <TouchableOpacity style={styles.button2} onPress={() => this.props.navigation.navigate("HunterPark")}>
+                    <Text style={styles.lotNames}><Text style={{fontWeight: "bold"}}>Hunter Park Station Instructions</Text></Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("HighlanderHousing")}>
-                    <Text style={styles.housingNames}>Highlander Housing</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
-                    <Text style={styles.housingNames}>Campus Crossing</Text>
-                </TouchableOpacity> */}
+
                 </ScrollView>
             </SafeAreaView>
         );
@@ -89,8 +125,16 @@ const styles = StyleSheet.create({
         fontSize: 19,
         
     },
+    infoCard:{
+        flex: 1,
+        borderWidth: 5
+    },
+    cardInfo:{
+        fontSize: 18,
+        fontWeight: "bold"
+    },
     lotTypes: {
-        color: "red",
+        color: "#4169e1",
         fontWeight: "bold",
         fontSize: 12
     },
@@ -186,6 +230,14 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         borderBottomColor: '#bfbfbf',
         borderBottomWidth: 1,
+    },
+    button2: {
+        height: 55,
+        paddingTop: 10,
+        paddingLeft: 20,
+        borderBottomColor: '#bfbfbf',
+        borderBottomWidth: 1,
+        backgroundColor: "gold"
     },
     headers: {
         // flexDirection: "row",
