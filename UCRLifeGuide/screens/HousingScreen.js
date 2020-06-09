@@ -21,7 +21,7 @@ export default class HousingScreen extends React.Component{
         const scrollEnabled = this.state.screenHeight > height;
         // LayoutAnimation.easeInEaseOut();
         return(
-            <SafeAreaView>
+            <SafeAreaView style={{height: 800}}>
                 <ScrollView onContentSizeChange={this.onContentSizeChange}>
                 <View style={styles.headers}>
                     <Text style={styles.title}>Housing Options</Text>                
