@@ -33,7 +33,7 @@ export default class BerkdaleScreen extends React.Component{
                         {"\n"}
                         {'\u2022'} 2 Bedroom / 1 Bath Prices: $1,550-1,625*
                         {"\n"}
-                        {'\u2022'} 3 Bedroom / 2 Bath Prices: $470* (Single Space) $940* (Private Room) $1880* (Private Unit) 
+                        {'\u2022'} 3 Bedroom / 2 Bath Prices: $2,110* 
                         {"\n"}
                         <Text style={{fontStyle: "italic", fontSize: 10}}>*Floor plans and rates may vary</Text>
                         {"\n"}
