@@ -56,7 +56,7 @@ export default class HousingScreen extends React.Component{
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
                     <Text style={styles.housingNames}>Campus Crossing</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
+                <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("Berkdale")}>
                     <Text style={styles.housingNames}>Berkdale</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.button1} onPress={() => this.props.navigation.navigate("CampusCrossing")}>
