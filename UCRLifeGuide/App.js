@@ -24,6 +24,7 @@ import ThePlazaScreen from './screens/HousingScreens/ThePlazaScreen';
 import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen';
 import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
 import BerkdaleScreen from './screens/HousingScreens/BerkdaleScreen';
+import UniversityTowersScreen from './screens/HousingScreens/UniversityTowersScreen';
 import Lot30Screen from './screens/ParkingScreens/Lot30Screen';
 import Lot50Screen from './screens/ParkingScreens/Lot50Screen';
 import Lot51Screen from './screens/ParkingScreens/Lot51Screen';
@@ -74,7 +75,8 @@ const HousingStack = createStackNavigator({
   HighlanderHousing: {screen: HighlanderHousingScreen},
   Falkirk: {screen: FalkirkScreen},
   ThePlaza: {screen: ThePlazaScreen},
-  Berkadle: {screen: BerkdaleScreen},
+  Berkdale: {screen: BerkdaleScreen},
+  UniversityTowers: {screen: UniversityTowersScreen},
 });
 
 const ParkingStack = createStackNavigator({
