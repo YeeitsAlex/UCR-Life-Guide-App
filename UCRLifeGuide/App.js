@@ -74,6 +74,7 @@ const HousingStack = createStackNavigator({
   HighlanderHousing: {screen: HighlanderHousingScreen},
   Falkirk: {screen: FalkirkScreen},
   ThePlaza: {screen: ThePlazaScreen},
+  Berkadle: {screen: BerkdaleScreen},
 });
 
 const ParkingStack = createStackNavigator({
