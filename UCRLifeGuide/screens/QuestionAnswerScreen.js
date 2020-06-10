@@ -2,7 +2,7 @@ import React from 'react'
 import {View, Text, StyleSheet, TouchableOpacity, ImageBackground, StatusBar, LayoutAnimation, Image, FlatList, SafeAreaView} from 'react-native'
 import * as firebase from 'firebase'
 import {Ionicons} from '@expo/vector-icons'
-import moment from 'moment'
+// import moment from 'moment'
 import Fire from "../Fire"
 
 // const firebase = require('firebase');

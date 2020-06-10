@@ -19,8 +19,12 @@ import GrandMarcScreen from './screens/HousingScreens/GrandMarcScreen';
 import GlenMorScreen from './screens/HousingScreens/GlenMorScreen';
 import BannockburnScreen from  './screens/HousingScreens/BannockburnScreen';
 import StonehavenScreen from  './screens/HousingScreens/StonehavenScreen';
+import FalkirkScreen from './screens/HousingScreens/FalkirkScreen';
+import ThePlazaScreen from './screens/HousingScreens/ThePlazaScreen';
 import CampusCrossingScreen from './screens/HousingScreens/CampusCrossingScreen';
 import HighlanderHousingScreen from './screens/HousingScreens/HighlanderHousingScreen';
+import BerkdaleScreen from './screens/HousingScreens/BerkdaleScreen';
+import UniversityTowersScreen from './screens/HousingScreens/UniversityTowersScreen';
 import Lot30Screen from './screens/ParkingScreens/Lot30Screen';
 import Lot50Screen from './screens/ParkingScreens/Lot50Screen';
 import Lot24Screen from './screens/ParkingScreens/Lot24Screen';
@@ -72,6 +76,10 @@ const HousingStack = createStackNavigator({
   GrandMarc: {screen: GrandMarcScreen},
   Stonehaven: {screen: StonehavenScreen},
   HighlanderHousing: {screen: HighlanderHousingScreen},
+  Falkirk: {screen: FalkirkScreen},
+  ThePlaza: {screen: ThePlazaScreen},
+  Berkdale: {screen: BerkdaleScreen},
+  UniversityTowers: {screen: UniversityTowersScreen},
 });
 
 const ParkingStack = createStackNavigator({
