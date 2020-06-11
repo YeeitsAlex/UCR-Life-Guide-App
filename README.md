@@ -36,8 +36,9 @@ Team Repository for UCR-Life-Guide-App
 
 `7. Download the expo app on iOS/Android`
 
-```
+
 **Running Instructions**
+```
 1. Clone :  https://github.com/YeeitsAlex/UCR-Life-Guide-App.git
   - You want to clone it inside your `Users` directory if you are on Windows, i.e. `C:\Users\YourUserName\UCR-Life-Guide-App`
 2. After cloning the repo run cd into UCRLifeGuide (project directory) and run npm install
