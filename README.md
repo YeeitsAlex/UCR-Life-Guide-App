@@ -1,5 +1,4 @@
 # UCR-Life-Guide-App
-Team Repository for UCR-Life-Guide-App
 
 # Built With
 - React-Native
