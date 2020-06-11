@@ -6,18 +6,17 @@ Team Repository for UCR-Life-Guide-App
 - Firebase
 - Node.js
 
-# Setup
-```
+# Prerequisites
 - Note that there may be some differences in installation if you’re on MacOS. 
 - Note that you will also need JDK 1.8 (same as JDK 8) or above in order to use firebase 
 - Some dependencies require python so make sure that is installed 
     - https://www.python.org/downloads/
-      - Check the button that includes PATH during setup, if you forgot to do so
+      	- Check the button that includes PATH during setup, if you forgot to do so
     - Some dependencies also require Visual Studio on your computer for windows 
-      - npm install --global --production windows-build-tools
+      	- npm install --global --production windows-build-tools
     - https://docs.expo.io/get-started/installation/
-```
-
+    
+# Setup
 1. `Install node.js from website`  (https://nodejs.org/en/download/)
      - node.js includes npm
      - Npm will be used to install necessary tools
