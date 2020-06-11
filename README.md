@@ -1,8 +1,12 @@
 # UCR-Life-Guide-App
 Team Repository for UCR-Life-Guide-App
 
+# Built With
+- React-Native
+- Firebase
+- Node.js
 
-  **Setup Notes**
+# Setup
 ```
 - Note that there may be some differences in installation if you’re on MacOS. 
 - Note that you will also need JDK 1.8 (same as JDK 8) or above in order to use firebase 
@@ -38,7 +42,7 @@ Team Repository for UCR-Life-Guide-App
 7. `Download the expo app on iOS/Android`
 
 
-**Running Instructions**
+# Running Instructions
 
 1. Clone :  https://github.com/YeeitsAlex/UCR-Life-Guide-App.git
     - You want to clone it inside your `Users` directory if you are on Windows, i.e. `C:\Users\YourUserName\UCR-Life-Guide-App`
