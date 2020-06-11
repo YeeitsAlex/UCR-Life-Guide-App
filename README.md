@@ -35,7 +35,7 @@ Team Repository for UCR-Life-Guide-App
       
 6. `expo login` (should be automatically logged in after signing up)
 
-`7. Download the expo app on iOS/Android`
+7. `Download the expo app on iOS/Android`
 
 
 **Running Instructions**
