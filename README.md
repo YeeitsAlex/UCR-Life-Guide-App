@@ -14,29 +14,28 @@ Team Repository for UCR-Life-Guide-App
     - https://docs.expo.io/get-started/installation/
 ```
 
- `1. Install node.js from website`  (https://nodejs.org/en/download/)
+1. `Install node.js from website`  (https://nodejs.org/en/download/)
      - node.js includes npm
      - Npm will be used to install necessary tools
  
- `2. npm install react-native`
+2. `npm install react-native`
      - Used to install react-native
   
- `3. npm install -g expo-cli`
+3. `npm install -g expo-cli`
      - Install expo, we will be using to test the app on the phone, avoids emulators (Also provides error codes)
  
- `4. Run expo whoami to verify the installation was successful`
+4. Run `expo whoami` to verify the installation was successful
 
-`5. Create an account for expo using expo register`   
-	
+5. Create an account for expo using `expo register`
 	- Requires:  
-		- Email  
+	    - Email  
         - User  
         - Password  
       
       
- `6. expo login (should be automatically logged in after signing up)`
+6. `expo login` (should be automatically logged in after signing up)
 
- `7. Download the expo app on iOS/Android`
+`7. Download the expo app on iOS/Android`
 
 
 **Running Instructions**
