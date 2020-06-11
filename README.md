@@ -25,13 +25,13 @@ Team Repository for UCR-Life-Guide-App
  
  `4. Run expo whoami to verify the installation was successful`
 
-`5. Create an account for expo`
-    - expo register 
-      ```- Requires:
-        - Email
-        - User
-        - Password
-      ```
+`5. Create an account for expo using expo register`   
+      - Requires:  
+        - Email  
+        - User  
+        - Password  
+      
+      
  `6. expo login (should be automatically logged in after signing up)`
 
  `7. Download the expo app on iOS/Android`
