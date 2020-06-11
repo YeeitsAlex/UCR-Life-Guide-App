@@ -38,7 +38,7 @@ Team Repository for UCR-Life-Guide-App
 
 
 **Running Instructions**
-```
+
 1. Clone :  https://github.com/YeeitsAlex/UCR-Life-Guide-App.git
   - You want to clone it inside your `Users` directory if you are on Windows, i.e. `C:\Users\YourUserName\UCR-Life-Guide-App`
 2. After cloning the repo run cd into UCRLifeGuide (project directory) and run npm install
@@ -46,4 +46,4 @@ Team Repository for UCR-Life-Guide-App
 3. After npm install finishes, should be able to run `expo start`  (in the terminal/cmd)  inside project directory
   - You will need to make sure your computer and your phone are on the same network 
   - The command will open up a browser tab, you can then scan QR code on your phone to open in expo to start the application.
-```
+
