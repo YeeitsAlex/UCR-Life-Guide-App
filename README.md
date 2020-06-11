@@ -13,6 +13,7 @@ Team Repository for UCR-Life-Guide-App
       - npm install --global --production windows-build-tools
     - https://docs.expo.io/get-started/installation/
 ```
+
  `1. Install node.js from website`  (https://nodejs.org/en/download/)
      - node.js includes npm
      - Npm will be used to install necessary tools
@@ -26,8 +27,9 @@ Team Repository for UCR-Life-Guide-App
  `4. Run expo whoami to verify the installation was successful`
 
 `5. Create an account for expo using expo register`   
-      - Requires:  
-        - Email  
+	
+	- Requires:  
+		- Email  
         - User  
         - Password  
       
