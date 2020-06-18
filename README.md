@@ -1,9 +1,11 @@
 # UCR-Life-Guide-App
 
+
 # Built With
 - React-Native
 - Firebase
 - Node.js
+- Expo
 
 # Prerequisites
 - Note that there may be some differences in installation if you’re on MacOS. 
@@ -41,7 +43,6 @@
 
 
 # Running Instructions
-
 1. Clone :  https://github.com/YeeitsAlex/UCR-Life-Guide-App.git
     - You want to clone it inside your `Users` directory if you are on Windows, i.e. `C:\Users\YourUserName\UCR-Life-Guide-App`
 2. After cloning the repo run cd into UCRLifeGuide (project directory) and run `npm install`
@@ -50,3 +51,12 @@
     - **You will need to make sure your computer and your phone are on the same network**
     - The command will open up a browser tab, you can then scan QR code on your phone to open in expo to start the application.
 
+# Features
+**1. User Authentication using Firebase**
+
+	- User can create a new account
+	- User can login as a guest
+	- Existing user can login
+
+**2. Question and Answer Forum**
+	- 
