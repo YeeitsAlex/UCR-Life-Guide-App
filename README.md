@@ -55,9 +55,9 @@
 
 # Features
 **1. User Authentication using Firebase**
-- User can create a new account
-- User can login as a guest
-- Existing user can login
+- User can register for a new account
+- User can `LOGIN` as a guest
+- Existing user can `LOGIN`
 
 <p align = "center">
 	<img src = "readmeImages/LoginPage.PNG">
