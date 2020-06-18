@@ -1,5 +1,7 @@
 # UCR-Life-Guide-App
-
+<p align="center">
+	<img src = "readmeImages/LogoScreen1.png">
+</p>
 
 # Built With
 - React-Native
@@ -53,10 +55,74 @@
 
 # Features
 **1. User Authentication using Firebase**
+- User can create a new account
+- User can login as a guest
+- Existing user can login
 
-	- User can create a new account
-	- User can login as a guest
-	- Existing user can login
+<p align = "center">
+	<img src = "readmeImages/LoginPage.PNG">
+	<img src = "readmeImages/RegistrationPage.PNG">
+</p>
 
-**2. Question and Answer Forum**
-	- 
+**2. Home Screen**
+
+- User will be greeted at the homepage with either:	
+	- Name that they registered with
+	- As a guest user
+- User can `LOGOUT` from their account on this page
+
+<p align ="center">
+	<img src = "readmeImages/HomeScreen.PNG">
+</p>	
+
+**3. Question and Answer Forum**
+- User can view `Frequently Asked Questions`	
+- User can view recent posts, which are retrieved from firebase
+- User can `Refresh` the page to view the most recent posts
+
+<p align ="center">
+	<img src = "readmeImages/QAScreen.PNG">
+</p>	
+
+**4. Post Screen**
+- User can ask a question or make a post. 
+- This feature posts to the database, the post then shows up on `Recent Questions`
+
+<p align = "center">
+	<img src = "readmeImages/PostScreen.PNG">
+</p>
+
+
+**5. Parking Screen**
+- User can view multiple On-Campus and Off-Campus parking options for students at UCR
+- Each item on the list will lead to its own screen, which contains helpful information for each parking destination
+	
+<p align ="center">
+	<img src = "readmeImages/ParkingScreen.PNG">
+</p>
+
+**6. Housing Screen**
+- User can view multiple On-Campus and Off-Campus housing options around UCR
+- Each item on the list will lead to its own screen, which contains information on each housing option
+
+<p align ="center">
+	<img src = "readmeImages/HousingScreen.PNG" height = "650" width = "300">
+</p>
+
+
+# Authors and Contributions
+- Alexander Yee
+	- Firebase Setup
+	- User Authentication
+	- User Interface Design
+	- Features Responsible For: 
+		- Login, Registration, Logout
+		- Homepage
+		- Parking Screen
+		- Question and Answer Screen
+		- Post Screen
+- Benjamin Lee
+	- Researching data for housing screen
+	- Features Responsible For: 
+		- Housing Screen (Styling and Data)
+		
