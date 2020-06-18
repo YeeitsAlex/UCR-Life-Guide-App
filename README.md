@@ -114,7 +114,8 @@
 - Alexander Yee
 	- Firebase Setup
 	- User Authentication
-	- User Interface Design
+	- UI/UX Design
+	- README
 	- Features Responsible For: 
 		- Login, Registration, Logout
 		- Homepage
