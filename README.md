@@ -113,6 +113,7 @@
 # Authors and Contributions
 - Alexander Yee
 	- Firebase Setup
+	- Firebase Cloud Storage Setup
 	- User Authentication
 	- UI/UX Design
 	- README
